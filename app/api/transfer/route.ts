@@ -12,7 +12,6 @@ export async function POST(req: Request) {
   try {
     const tx = await client.createTransaction({
       walletId,
-      blockchain: "ARC-TESTNET",
       destinationAddress,
       amounts: [amount],
       fee: { type: "level", config: { feeLevel: "MEDIUM" } },
