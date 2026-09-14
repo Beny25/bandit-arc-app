@@ -13,7 +13,7 @@ export async function POST(req: Request) {
     const tx = await client.createTransaction({
       walletId,
       destinationAddress,
-      amounts: [amount],
+      amount: amount,
       fee: { type: "level", config: { feeLevel: "MEDIUM" } },
     });
     // poll until complete
